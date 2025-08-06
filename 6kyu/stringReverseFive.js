@@ -29,4 +29,16 @@ function spinWords(string){
 function spinWords1(str){
     return str.split(' ').map( w => w.length<5 ? w : w.split('').reverse().join('') ).join(' ');
   }
+
+  function spinWords2(sentence, limit = 5) {
+  
+    const isLongWord = word => word.length >= limit;
+    const reverseWord = word => word.split('').reverse().join('');
+  
+    const words = sentence.split(' ');
+    const result = words.map(word => (isLongWord(word) ? reverseWord(word) : word));
+  
+    return result.join(' ');
+    
+  }
 (spinWords('Hey fellow warriors'))
