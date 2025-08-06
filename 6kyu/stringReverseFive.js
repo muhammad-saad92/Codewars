@@ -25,4 +25,8 @@ function spinWords(string){
     // After the loop, we join method to join the array into a string
     return(reverseArr.join(' '))
 }
+//  OR YOU CAN USE THIS SMALLER FUNCTION
+function spinWords1(str){
+    return str.split(' ').map( w => w.length<5 ? w : w.split('').reverse().join('') ).join(' ');
+  }
 (spinWords('Hey fellow warriors'))
