@@ -1,1 +1,1 @@
-const doubleInteger = i => i*i;
+const doubleInteger = i => i+i;
