@@ -1,0 +1,1 @@
+const doubleInteger = i => i*i;
