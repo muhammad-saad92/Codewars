@@ -9,6 +9,6 @@ function leastLarger(a,i) {
         }
     }
     console.log(val)
-  
+  console.log()
   }
   
