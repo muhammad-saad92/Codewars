@@ -1,11 +1,9 @@
-function solution(str){
-  let arr = str.match(/(..?)/g)
-  let odd;
-  if(arr[arr.length - 1].length % 2 !== 0){
-      odd = arr[arr.length - 1] + '_';
-      arr.pop();
-      arr.push(odd)
-  } 
-  return arr;
-} 
-console.log(solution('abcd'))
+function solution(str) {
+  let result = [];
+  for (let i = 0; i < str.length; i += 2) {
+      let pair = str.slice(i, i + 2);
+      if (pair.length === 1) pair += "_"; // add underscore if odd
+      result.push(pair);
+  }
+  return result;
+}
