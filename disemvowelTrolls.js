@@ -8,5 +8,7 @@
 
 // Note: for this kata y isn't considered a vowel.
 function disemvowel(str) {
-    return str;
+    return str.replaceAll('a', '').replaceAll('e','').replaceAll('i','').replaceAll('o','').replaceAll('u','').replaceAll('A','').replaceAll('E','').replaceAll('I','').replaceAll('O','').replaceAll('U','');
   }
+
+  console.log(disemvowel("This website is for losers LOL!"));
