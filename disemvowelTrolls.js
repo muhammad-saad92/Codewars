@@ -11,4 +11,13 @@ function disemvowel(str) {
     return str.replaceAll('a', '').replaceAll('e','').replaceAll('i','').replaceAll('o','').replaceAll('u','').replaceAll('A','').replaceAll('E','').replaceAll('I','').replaceAll('O','').replaceAll('U','');
   }
 
+
+  function disemvowel(str) {
+    const vowels = ['a','e','i','o','u','A','E','I','O','U'];
+    return str
+      .split('')
+      .filter(ch => !vowels.includes(ch))
+      .join('');
+  }
+  
   console.log(disemvowel("This website is for losers LOL!"));
