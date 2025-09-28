@@ -16,6 +16,7 @@
 
 // Attention: If the number has leading zeros the amount of digits should be considered.
 
+
 function incrementString(strng) {
   let arr = strng.split('');
   let alphabetArr = [];
@@ -61,6 +62,7 @@ function incrementString(strng) {
 
   return completedArr;
 }
+// i looked at the code after a while and i dont know what i just wrote. anyone reading this. good luck!
 
 
   console.log(incrementString('foo042'))
