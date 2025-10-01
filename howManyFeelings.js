@@ -19,6 +19,26 @@
 
 // If the feeling can be formed several times from different letters - plus one to the answer.
 
-function countFeelings(string, array) {
-    //good luck
+function countFeelings(string, feelings) {
+    let result = 0;
+  
+    for (let feeling of feelings) {
+      let strArr = string.split(''); // copy of string letters
+      let canForm = true;
+  
+      for (let ch of feeling) {
+        let idx = strArr.indexOf(ch);
+        if (idx === -1) {
+          canForm = false;
+          break;
+        } else {
+          strArr.splice(idx, 1); // use the letter once
+        }
+      }
+  
+      if (canForm) result++;
+    }
+  
+    return `${result} feeling${result !== 1 ? 's' : ''}.`;
   }
+  
