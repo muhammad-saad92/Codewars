@@ -42,3 +42,16 @@ function countFeelings(string, feelings) {
     return `${result} feeling${result !== 1 ? 's' : ''}.`;
   }
   
+  function countFeelings(string, array) {
+    let count = 0;
+    
+    array.forEach((item) => {
+        if (item.split('').every((i) => {
+            return string.includes(i); 
+        })) {
+          count++;
+        }
+    });
+  }
+    
+    return count == 1 ? `${count} feeling.` : `${count} feelings.`;
