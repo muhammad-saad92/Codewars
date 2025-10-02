@@ -18,5 +18,9 @@
 // function should be case insensitive to pass the tests
 
 function validateHello(greetings) {
-    
+    const hello = ['hello', 'ciao', 'salut', 'hallo', 'hola', 'ahoj', 'czesc'];
+    let lower = greetings.toLowerCase();
+    return hello.some(h => lower.includes(h))
   }
+
+  console.log(validateHello('ciaO'))
